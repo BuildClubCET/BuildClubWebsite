@@ -29,9 +29,9 @@ export default function Slider() {
         modules={[FreeMode, Pagination, Mousewheel, Keyboard]}
         className="w-full h-72 "
       >
-        {slides.map((s) => {
+        {slides.map((s, index) => {
           return (
-            <SwiperSlide className=" p-15  border-r border-t rounded-2xl border-b border-l m-4 ">
+            <SwiperSlide key={index} className=" p-15  border-r border-t rounded-2xl border-b border-l m-4 ">
               <div className="w-full  rounded overflow-hidden shadow-lg">
                 <div className="px-4 py-4">
                   <div className="font-bold text-blue-50 border-gray-400-xl mb-2">
