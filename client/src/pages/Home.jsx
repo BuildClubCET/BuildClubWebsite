@@ -1,3 +1,4 @@
+import Events from '../components/Events'
 import Landing from '../components/Landing'
 import Team from '../components/Team'
 
@@ -6,6 +7,7 @@ const Home = () => {
     /* All components to be arranged here */
     <>
     <Landing />
+    <Events />
     <Team />  
     </>
   )
