@@ -1,12 +1,12 @@
-import React from 'react'
-import Team from './Team'
+import Landing from '../components/Landing'
+import Team from '../components/Team'
 
 const Home = () => {
   return (
     /* All components to be arranged here */
     <>
-    
-    <Team />
+    <Landing />
+    <Team />  
     </>
   )
 }

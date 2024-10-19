@@ -1,6 +1,6 @@
 import React from "react";
 import "../index.css";
-import Slider from "../components/Slider";
+import Slider from "./Slider";
 export default function Team() {
   return (
     <>
