@@ -11,7 +11,7 @@ import { FreeMode, Pagination, Keyboard, Autoplay } from "swiper/modules";
 import goureesh from "../assets/Goureesh.jpg";
 import ajith from "../assets/Ajith.jpg";
 import pappan from "../assets/Pappan.jpg";
-import anandalekshmi from "../assets/Anandalekshmi.jpg";
+import anandalekshmi from "../assets/AnandaLekshmi.jpg";
 import sachu from "../assets/sachu.jpg";
 import suraj from "../assets/Suraj.jpg";
 
