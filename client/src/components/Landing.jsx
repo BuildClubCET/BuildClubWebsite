@@ -43,7 +43,7 @@ const Landing = forwardRef(({ homeRef, eventRef, galleryRef, teamRef }) => {
       <main
         className="flex flex-col-reverse md:flex-row justify-between items-center 
         px-4 sm:px-10 md:px-24 
-        mb-[36px] md:mb-0 
+        mb-[36px] md:mb-0 mt-20 md:mt-0
         space-y-8 md:space-y-0 
         h-[80vh]"
         ref={homeRef}
@@ -52,7 +52,7 @@ const Landing = forwardRef(({ homeRef, eventRef, galleryRef, teamRef }) => {
           <h1 className="font-extralight text-2xl italic md:text-4xl leading-none tracking-wide text-black m-0">
             Welcome to
           </h1>
-          <h2 className="font-bold text-4xl md:text-8xl leading-none text-black m-0">
+          <h2 className="font-bold text-4xl md:text-6xl xl:text-8xl leading-none text-black m-0">
             BUILD CLUB CET!
           </h2>
           <p

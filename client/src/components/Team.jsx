@@ -21,16 +21,6 @@ const Team = forwardRef(({teamRef},ref) =>{
             <div className="text-white col-span-2 w-full p-4 md:p-16">
               <div className="font-bold text-white">DISCLAIMER:</div>
               The CET Build Club is a dynamic and tech-focused community where students collaborate on innovative projects, ranging from AI and machine learning to robotics and IOT.
-              <div className="text-white mt-5 flex flex-wrap">
-                <a href="/Home" className="px-2 md:px-4">
-                  &gt; Home
-                </a>
-                <a className="px-2 md:px-4"> &gt; About Us</a>
-                <a href='#AboutUs' className="px-2 md:px-4"> &gt; Events</a>
-                <a href='#Gallery' className="px-2 md:px-4"> &gt; Gallery</a>
-                <a href='#Team' className="px-2 md:px-4"> &gt; Our Team</a>
-                <a href='#ContactUs' className="px-2 md:px-4"> &gt; Contact Us</a>
-              </div>
             </div>
 
             <div className="text-white p-4 md:p-8 h-32 w-full md:w-32 mb-40 md:mb-0">
