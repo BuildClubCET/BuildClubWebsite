@@ -1,4 +1,5 @@
 import Events from '../components/Events'
+import Gallery from '../components/Gallery'
 import Landing from '../components/Landing'
 import Team from '../components/Team'
 
@@ -8,6 +9,7 @@ const Home = () => {
     <>
     <Landing />
     <Events />
+    <Gallery />
     <Team />  
     </>
   )
