@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { forwardRef, useEffect, useState } from 'react';
 
-function Events() {
+const Events = forwardRef( ({eventRef},ref) => {
   const [showEvents, setShowEvents] = useState(false);
   const [board, setBoard] = useState(Array(9).fill(null));
   const [xIsNext, setXIsNext] = useState(true);
@@ -58,7 +58,7 @@ function Events() {
     <div className="bg-[#0e1925] text-white min-h-screen flex justify-center items-center p-4">
       <div className="flex flex-col md:flex-row w-full max-w-[1200px]">
         <div className="flex-1 text-center mb-8 md:mb-0">
-          <h1 className="text-4xl md:text-6xl font-bold font-serif mb-8">EVENTS</h1>
+          <h1 className="text-4xl md:text-6xl font-bold font-serif mb-8" ref={eventRef}>EVENTS</h1>
 
           <div className="flex flex-col items-center">
             <div className="grid grid-cols-3 grid-rows-3 gap-2 mb-5">
@@ -131,6 +131,8 @@ function Events() {
       </div>
     </div>
   );
-}
+})
+
+Events.displayName = 'Events';
 
 export default Events;

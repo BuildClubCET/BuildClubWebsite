@@ -1,11 +1,11 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import "../index.css";
 import Slider from "./Slider";
 
-export default function Team() {
+const Team = forwardRef(({teamRef},ref) =>{
   return (
     <>
-    <div className="bg-[#ccd0cf] pt-[40px]">
+    <div className="bg-[#ccd0cf] pt-[40px]" ref={teamRef}>
       <div className="h-16 text-4xl font-bold font-serif content-center text-center mb-[20px]">
         OUR TEAM
       </div>
@@ -111,4 +111,7 @@ export default function Team() {
       </footer>
     </>
   );
-}
+})
+
+Team.displayName = 'Team';
+export default Team;
