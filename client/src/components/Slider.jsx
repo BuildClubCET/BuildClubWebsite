@@ -1,56 +1,94 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-const slides = ["1", "2", "3", "4", "5", "6"];
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
-import "swiper/css/pagination";
 
 // import required modules
-import {
-  FreeMode,
-  Navigation,
-  Pagination,
-  Keyboard,
-} from "swiper/modules";
+import { FreeMode, Pagination, Keyboard, Autoplay } from "swiper/modules";
 
-const data=[
+import goureesh from "../assets/Goureesh.jpg";
+import ajith from "../assets/Ajith.jpg";
+import pappan from "../assets/Pappan.jpg";
+import anandalekshmi from "../assets/Anandalekshmi.jpg";
+import sachu from "../assets/sachu.jpg";
+import suraj from "../assets/Suraj.jpg";
+
+const data = [
   {
-    name:'Goureesh Chandra',
-    img:'',
-    title:'President'
+    name: "Goureesh Chandra",
+    img: goureesh,
+    title: "President",
   },
-  
-]
+  {
+    name: "Anadapadhmanabhan B",
+    img: pappan,
+    title: "Vice President",
+  },
+  {
+    name: "Ajith Jeejo",
+    img: ajith,
+    title: "Secretary",
+  },
+  {
+    name: "Anandalekshmi",
+    img: anandalekshmi,
+    title: "Joint Secretary",
+  },
+  {
+    name: "Sachu T Cherian",
+    img: sachu,
+    title: "Joint Secretary",
+  },
+  {
+    name: "Suraj Krishna S S",
+    img: suraj,
+    title: "Joint Secretary",
+  },
+];
 
 export default function Slider() {
   return (
-    <>
+    <div className="w-[85%]">
       <Swiper
-        slidesPerView={4}
-        spaceBetween={30}
+        spaceBetween={'15px'}
         keyboard={true}
         freeMode={true}
-        loop={true}
-        
-        modules={[FreeMode, Pagination, Navigation, Keyboard]}
-        className="w-full h-72 "
+        autoplay={true}
+        modules={[FreeMode, Pagination, Keyboard, Autoplay]}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        }}
       >
-        {slides.map((s, index) => {
-          return (
-            <SwiperSlide key={index} className=" p-15  border-r border-t rounded-2xl border-b border-l m-4 ">
-              <div className="w-full  rounded overflow-hidden shadow-lg">
-                <div className="px-4 py-4">
-                  <div className="font-bold text-blue-50 border-gray-400-xl mb-2">
-                    The Coldest Sunset
-                  </div>
-                </div>
+        {data.map((s, index) => (
+          <SwiperSlide
+            key={index}
+          >
+            <div className="my-[10px] bg-black rounded-xl">
+              <div className="h-[16rem] w-[16rem] md:h-[22rem] md:w-[22rem]">
+                <img
+                  src={s.img}
+                  alt={s.name}
+                  className="rounded-t-xl"
+                />
               </div>
-            </SwiperSlide>
-          );
-        })}
+              <div className="text-center my-[3px]">
+                <h3 className="text-lg font-bold text-white">{s.name}</h3>
+                <p className="text-sm text-gray-200">{s.title}</p>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
-    </>
+    </div>
   );
 }

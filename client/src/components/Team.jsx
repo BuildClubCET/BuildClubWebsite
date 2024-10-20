@@ -5,12 +5,17 @@ import Slider from "./Slider";
 export default function Team() {
   return (
     <>
-      <div className="h-16 bg-[#04131a] text-2xl font-bold content-center text-center text-white">
+    <div className="bg-[#ccd0cf] pt-[40px]">
+      <div className="h-16 text-4xl font-bold font-serif content-center text-center mb-[20px]">
         OUR TEAM
       </div>
-      <div className="font-semibold bg-[#ccd0cf]">
-        <Slider className="w-full md:w-1/2 h-1/2" />
-        
+      <div className="flex flex-col items-center justify-center bg-[#ccd0cf]">
+        <Slider />
+      </div>
+      
+    </div>
+      
+      <div className="font-semibold bg-[#ccd0cf]">        
         <div className="h-full bg-[#04131a] p-4 md:p-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="text-white col-span-2 w-full p-4 md:p-16">

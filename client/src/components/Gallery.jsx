@@ -1,20 +1,37 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, FreeMode, Navigation } from 'swiper/modules';
+import { Pagination, FreeMode, Navigation,Autoplay } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
+import 'swiper/css/autoplay';
 import './gallery.css'; // Import the custom CSS file
-import logo from "../assets/buildClubLogo.png";
+
+
+import pic1 from '../assets/gallery/1.jpg';
+import pic2 from '../assets/gallery/2.jpg';
+import pic3 from '../assets/gallery/3.jpg';
+import pic4 from '../assets/gallery/4.jpg';
+import pic5 from '../assets/gallery/5.jpg';
+import pic6 from '../assets/gallery/6.jpg';
+import pic7 from '../assets/gallery/7.jpg';
+import pic8 from '../assets/gallery/8.jpg';
+import pic9 from '../assets/gallery/9.jpg';
+import pic10 from '../assets/gallery/10.jpg';
 
 const data = [
-    { img: logo },
-    { img: logo },
-    { img: logo },
-    { img: logo },
-    { img: logo },
+    { img: pic1 },
+    { img: pic2 },
+    { img: pic3 },
+    { img: pic4 },
+    { img: pic5 },
+    { img: pic6 },
+    { img: pic7 },
+    { img: pic8 },
+    { img: pic9 },
+    { img: pic10 },
 ];
 
 const Gallery = () => {
@@ -31,8 +48,9 @@ const Gallery = () => {
                     spaceBetween={30}
                     freeMode={true}
                     loop={true}
+                    autoplay={true}
                     pagination={{ clickable: true, el: '.swiper-pagination' }}
-                    modules={[Pagination, FreeMode, Navigation]}
+                    modules={[Pagination, FreeMode, Navigation, Autoplay]}
                     className="w-full py-5"
                     breakpoints={{
                         640: {
