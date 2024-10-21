@@ -1,5 +1,7 @@
 import React, { forwardRef, useEffect, useState } from 'react';
 
+import eventData from '../data';
+
 const Events = forwardRef( ({eventRef},ref) => {
   const [showEvents, setShowEvents] = useState(false);
   const [board, setBoard] = useState(Array(9).fill(null));
@@ -96,7 +98,7 @@ const Events = forwardRef( ({eventRef},ref) => {
               </div>
             ) : isDraw ? (
               <div className="mt-5 text-center">
-                <h2 className="text-xl md:text-2xl">It's a Draw!</h2>
+                <h2 className="text-xl md:text-2xl">It&apos;s a Draw!</h2>
                 <button
                   className="mt-4 px-4 py-2 text-lg md:text-xl bg-[#dde2e8] text-black rounded-lg hover:bg-[#062546] transition"
                   onClick={resetGame}
@@ -111,20 +113,21 @@ const Events = forwardRef( ({eventRef},ref) => {
         </div>
 
         <div className="flex-1 md:ml-12 space-y-8">
-          {['Event 1 - Aug 5', 'Event 2 - Aug 10', 'Event 3 - Aug 15'].map((event, index) => (
+          {eventData.map((event, index) => (
             <div
               key={index}
               className={`flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-5 ${showEvents ? 'opacity-100' : 'opacity-0'} transition-opacity`}
             >
               <div className="border-l-2 border-white h-full hidden md:block"></div>
               <div className="flex-1 text-center md:text-left">
-                <h2 className="text-xl md:text-2xl underline font-bold">{event}</h2>
+                <h2 className="text-xl md:text-2xl underline font-bold">{event.title}</h2>
                 <p className="mt-1">
-                  The CET Build Club is a dynamic group that focuses on construction and engineering projects.
+                  {event.date}
                 </p>
-                <p>Details</p>
               </div>
-              <div className="w-[150px] md:w-[200px] h-[100px] md:h-[130px] bg-white rounded-lg transform hover:scale-110 transition"></div>
+              <div className="w-[65%] h-auto md:w-[40%] bg-white rounded-lg transform hover:scale-110 transition">
+                <img src={event.img} className='h-full w-full'/>
+              </div>
             </div>
           ))}
         </div>

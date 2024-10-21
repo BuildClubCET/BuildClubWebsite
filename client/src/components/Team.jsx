@@ -39,17 +39,7 @@ const Team = forwardRef(({teamRef},ref) =>{
       <footer className="bg-[#04131a]">
         <div className="bg-[#04131a] w-full max-w-screen-xl mx-auto py-4 md:py-8">
           <div className="flex flex-wrap justify-center space-x-4 md:space-x-5 rtl:space-x-reverse">
-            <div className="bg-[#d9d9d9] p-2 md:p-4 rounded-3xl flex space-x-4 md:space-x-6">
-              {/* Facebook */}
-              <a href="#" className="text-[#04131a] hover:text-gray-900 dark:hover:text-white">
-                <div className="w-8 h-8 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-white shadow-lg">
-                  <svg className="w-6 h-6 md:w-8 md:h-8" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
-                    <path fillRule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clipRule="evenodd" />
-                  </svg>
-                  <span className="sr-only">Facebook page</span>
-                </div>
-              </a>
-
+            <div className="bg-[#d9d9d9] mt-6 md:mt-0 p-2 md:p-4 rounded-3xl flex space-x-4 md:space-x-6">
               {/* Discord */}
               <a href="#" className="text-[#04131a] hover:text-gray-900 dark:hover:text-white">
                 <div className="w-8 h-8 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-white shadow-lg">
