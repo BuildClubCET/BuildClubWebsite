@@ -32,7 +32,7 @@ const data = [
     title: "Secretary",
   },
   {
-    name: "Anandalekshmi",
+    name: "Anantha Lekshmi S Nair",
     img: anandalekshmi,
     title: "Joint Secretary",
   },
