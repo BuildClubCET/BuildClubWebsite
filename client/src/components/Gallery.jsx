@@ -38,7 +38,7 @@ const Gallery = forwardRef(({galleryRef},ref) => {
     return (
         <div className='flex flex-col items-center w-full py-5 bg-[#05141B] relative'>
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4' ref={galleryRef}>Our Gallery</h2>
-            <p className='text-lg md:text-xl text-gray-300 mb-8 text-center max-w-2xl'>
+            <p className='text-lg md:text-xl text-gray-300 mb-8 text-center max-w-[85%]'>
                 Explore our collection of images showcasing the innovative projects and events at CET Build Club.
             </p>
             <div className='w-full md:w-3/4'>
