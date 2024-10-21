@@ -1,9 +1,10 @@
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import robotImage from '../assets/robot.png'; // Robot image
-import whatsappLogo from '../assets/buildClubLogo.png'; // WhatsApp Logo
 import iitmicLogo from '../assets/IITMIC.png'; // IITMIC Logo
 import iitmLogo from '../assets/IITRP.png'; // IITM Logo
+
+import logo from "../assets/logo2.png"
 
 const Landing = forwardRef(({ homeRef, eventRef, galleryRef, teamRef }) => {
   const scrollToSection = (ref) => {
@@ -15,7 +16,7 @@ const Landing = forwardRef(({ homeRef, eventRef, galleryRef, teamRef }) => {
       {/* Header Section */}
       <header className="sticky left-0 right-0 top-0 bg-white shadow-md flex items-center justify-between px-4 sm:px-10 md:px-12 py-2">
         <div className="flex items-center">
-          <img src={whatsappLogo} alt="WhatsApp Logo" className="h-12 sm:h-16 mr-3 sm:mr-5" />
+          <img src={logo} alt="WhatsApp Logo" className="h-12 sm:h-16 mr-3 sm:mr-5" />
         </div>
 
         <nav className="hidden sm:flex items-center space-x-4 md:space-x-8 font-semibold font-serif">

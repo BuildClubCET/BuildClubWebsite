@@ -63,13 +63,13 @@ const Events = forwardRef( ({eventRef},ref) => {
           <h1 className="text-4xl md:text-6xl font-bold font-serif mb-8" ref={eventRef}>EVENTS</h1>
 
           <div className="flex flex-col items-center">
-            <div className="grid grid-cols-3 grid-rows-3 gap-2 mb-5">
+            <div className="grid grid-cols-3 grid-rows-3 mb-5">
               {board.map((cell, index) => (
                 <div
                   key={index}
-                  className={`w-20 h-20 md:w-24 md:h-24 border-2 border-white text-2xl md:text-4xl font-bold flex items-center justify-center cursor-pointer ${
+                  className={`w-20 h-20 md:w-24 md:h-24 border-white text-2xl md:text-4xl font-bold flex items-center justify-center cursor-pointer ${
                     index < 6 ? 'border-b-4' : ''
-                  } ${[0, 1, 2, 4, 5, 7].includes(index) ? 'border-r-4' : ''}`}
+                  } ${[0, 1, 3, 4, 6, 7].includes(index) ? 'border-r-4' : ''}`}
                   onClick={() => handleClick(index)}
                 >
                   {cell}
