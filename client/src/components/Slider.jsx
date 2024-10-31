@@ -82,7 +82,7 @@ export default function Slider() {
                   className="rounded-t-xl"
                 />
               </div>
-              <div className="text-center py-[3px] bg-black w-[16rem] md:h-[22rem] md:w-[22rem] rounded-b-xl">
+              <div className="text-center py-[3px] bg-black w-[16rem] md:w-[22rem] rounded-b-xl">
                 <h3 className="text-lg font-bold text-white">{s.name}</h3>
                 <p className="text-sm text-gray-200">{s.title}</p>
               </div>
