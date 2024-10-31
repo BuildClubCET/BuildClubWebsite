@@ -1,18 +1,16 @@
 import React, { forwardRef } from "react";
-import "../index.css";
 import Slider from "./Slider";
 
 const Team = forwardRef(({teamRef},ref) =>{
   return (
     <>
-    <div className="bg-[#ccd0cf] pt-[40px]" ref={teamRef}>
+    <div className="bg-[#ccd0cf] pt-[40px] pb-[4rem]" ref={teamRef}>
       <div className="h-16 text-4xl font-bold font-serif content-center text-center mb-[20px]">
         OUR TEAM
       </div>
       <div className="flex flex-col items-center justify-center bg-[#ccd0cf]">
         <Slider />
       </div>
-      
     </div>
       
       <div className="font-semibold bg-[#ccd0cf]">        
