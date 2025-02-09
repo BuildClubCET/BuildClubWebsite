@@ -15,7 +15,6 @@ export const gallery = defineType({
             type:"image",
             validation: (rule) => rule.required()
         }),
-
     ]
 })
 

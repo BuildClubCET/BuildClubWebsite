@@ -2,6 +2,7 @@ import React, { forwardRef } from "react";
 import Slider from "./Slider";
 
 const Team = forwardRef(({teamRef},ref) =>{
+
   return (
     <>
     <div className="bg-[#ccd0cf] pt-[40px] pb-[4rem]" ref={teamRef}>
