@@ -14,14 +14,14 @@ const Team = forwardRef(({teamRef},ref) =>{
     </div>
       
       <div className="font-semibold bg-[#ccd0cf]">        
-        <div className="h-full bg-[#04131a] p-4 md:p-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="bg-[#04131a] p-4 md:p-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-10">
             <div className="text-white col-span-2 w-full p-4 md:p-16">
               <div className="font-bold text-white">DISCLAIMER:</div>
               The CET Build Club is a dynamic and tech-focused community where students collaborate on innovative projects, ranging from AI and machine learning to robotics and IOT.
             </div>
 
-            <div className="text-white p-4 md:p-8 h-32 w-full md:w-32 mb-40 md:mb-0">
+            <div className="flex flex-col items-center w-full text-white">
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1239.5025885171574!2d76.90607098767227!3d8.545771266330258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bec79541c519%3A0x98324eb5aafb3778!2sCollege%20of%20Engineering%20Trivandrum%20(CET)!5e0!3m2!1sen!2sin!4v1726547831627!5m2!1sen!2sin" 
                 width="300px" 

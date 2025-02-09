@@ -1,6 +1,7 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, FreeMode, Navigation,Autoplay } from 'swiper/modules';
+import { Pagination, FreeMode, Navigation, Autoplay } from 'swiper/modules';
+import { client } from '../sanity/client';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -9,32 +10,20 @@ import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 import './gallery.css'; // Import the custom CSS file
 
+const galleryQuery = `*[_type=="Gallery"]{_id, Title, "imageURL":Image.asset->url}`;
 
-import pic1 from '../assets/gallery/1.jpg';
-import pic2 from '../assets/gallery/2.jpg';
-import pic3 from '../assets/gallery/3.jpg';
-import pic4 from '../assets/gallery/4.jpg';
-import pic5 from '../assets/gallery/5.jpg';
-import pic6 from '../assets/gallery/6.jpg';
-import pic7 from '../assets/gallery/7.jpg';
-import pic8 from '../assets/gallery/8.jpg';
-import pic9 from '../assets/gallery/9.jpg';
-import pic10 from '../assets/gallery/10.jpg';
+const Gallery = forwardRef(({ galleryRef }, ref) => {
+    const [galleryImages, setGalleryImages] = useState([]);
 
-const data = [
-    { img: pic1 },
-    { img: pic2 },
-    { img: pic3 },
-    { img: pic4 },
-    { img: pic5 },
-    { img: pic6 },
-    { img: pic7 },
-    { img: pic8 },
-    { img: pic9 },
-    { img: pic10 },
-];
+    useEffect(() => {
+        async function fetchGallery() {
+            const data = await client.fetch(galleryQuery);
+            setGalleryImages(data);
+        }
 
-const Gallery = forwardRef(({galleryRef},ref) => {
+        fetchGallery();
+    }, []);
+
     return (
         <div className='flex flex-col items-center w-full py-5 pt-16 bg-[#05141B] relative'>
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4' ref={galleryRef}>Our Gallery</h2>
@@ -64,10 +53,10 @@ const Gallery = forwardRef(({galleryRef},ref) => {
                         },
                     }}
                 >
-                    {data.map((item, index) => (
-                        <SwiperSlide key={index}>
-                            <div className='flex items-center justify-center h-full p-4'>
-                                <img src={item.img} className='h-auto w-auto max-h-60 max-w-full rounded-lg shadow-lg' alt={`Slide ${index}`} />
+                    {galleryImages.map((item, index) => (
+                        <SwiperSlide key={item._id}>
+                            <div className='flex items-center justify-center w-[100%] h-[20rem] p-4'>
+                                <img src={item.imageURL} className='w-full rounded-lg shadow-lg' alt={item.Title} />
                             </div>
                         </SwiperSlide>
                     ))}
@@ -78,6 +67,5 @@ const Gallery = forwardRef(({galleryRef},ref) => {
     );
 });
 
-
-Gallery.displayName = 'Gallery'
+Gallery.displayName = 'Gallery';
 export default Gallery;
