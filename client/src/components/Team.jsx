@@ -3,6 +3,8 @@ import Slider from "./Slider";
 
 const Team = forwardRef(({teamRef},ref) =>{
 
+  const year = new Date().getFullYear();
+
   return (
     <>
     <div className="bg-[#ccd0cf] pt-[40px] pb-[4rem]" ref={teamRef}>
@@ -81,7 +83,7 @@ const Team = forwardRef(({teamRef},ref) =>{
             </div>
           </div>
           <span className="block text-sm text-white text-center dark:text-gray-400 mt-4">
-            © 2024{" "}
+            © {year} &nbsp;
             <div className="hover:underline">
               BuildClubCet . All Rights Reserved.
             </div>
